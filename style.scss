@@ -248,6 +248,15 @@ section {
 
         i {
             color: $main-color;
+            transform: scale(1);
+            transition: transform .3s;
+        }
+
+        &:hover {
+            i {
+                transform: scale(1.2);
+                transition: transform .3s;
+            }
         }
     }
 }
@@ -308,11 +317,11 @@ section {
 
 @keyframes arrowBump {
     0% {
-        top: -3px;
+        transform: translateY(-3px);
     }
 
     100% {
-        top: 3px;
+        transform: translateY(3px);
     }
 }
 

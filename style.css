@@ -256,6 +256,21 @@ section .icon {
 
 section .icon i {
   color: #896D61;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+section .icon:hover i {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
 }
 
 .wrapper {
@@ -315,19 +330,23 @@ section .icon i {
 
 @-webkit-keyframes arrowBump {
   0% {
-    top: -3px;
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
   }
   100% {
-    top: 3px;
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
   }
 }
 
 @keyframes arrowBump {
   0% {
-    top: -3px;
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
   }
   100% {
-    top: 3px;
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
   }
 }
 
