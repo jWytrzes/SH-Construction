@@ -12,12 +12,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 behavior: 'smooth'
             });
         }
-        toggleMenu();
+        closeMenu();
     }
 
-    function toggleMenu() {
+    let toggleMenu = () => {
         document.querySelector('.burger').classList.toggle('active');
         document.querySelector('.menu-lists').classList.toggle('active');
+    }
+
+    let closeMenu = () => {
+        document.querySelector('.burger').classList.remove('active');
+        document.querySelector('.menu-lists').classList.remove('active');
     }
 
     function menuActiveChange() {

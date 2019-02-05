@@ -44,7 +44,7 @@ img {
     width: 100%;
     top: 50px;
     left: 0;
-    height: calc(100vh - 50px);
+    height: calc(100% - 50px);
 }
 
 .desktop {
@@ -207,7 +207,7 @@ header {
         z-index: 9;
         position: relative;
         width: 100%;
-        padding: 30px 30px 15px;
+        padding: 30px 25px 15px;
         text-align: center;
         align-self: flex-end;
         background: white;
@@ -237,15 +237,6 @@ header {
 }
 
 section {
-    .wrapper {
-        padding: 20px;
-
-        img {
-            height: 100%;
-            margin-top: 20px;
-            width: 100%;
-        }
-    }
 
     h2 {
         width: 100%;
@@ -261,10 +252,24 @@ section {
     }
 }
 
+.wrapper {
+        padding: 20px;
+
+        img {
+            height: 100%;
+            margin-top: 20px;
+            width: 100%;
+        }
+    }
+
 .columns {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.column-2 {
+    margin: 20px 0;
 }
 
 #contact {
@@ -292,6 +297,15 @@ section {
     }
 }
 
+#steps {
+    .wrapper {
+        img {
+            margin-top: 0;
+        }
+    }
+}
+
+
 @keyframes arrowBump {
     0% {
         top: -3px;
@@ -301,6 +315,7 @@ section {
         top: 3px;
     }
 }
+
 
 @media(min-width: 992px) {
     .mobile {
@@ -362,5 +377,17 @@ section {
     .column-3 {
         width: 33.33%;
         padding: 40px;
+    }
+
+    .column-2 {
+        width: 50%;
+        padding: 40px;
+    }
+
+    //podstrona
+    .subpage {
+        header {
+            height: 70vh;
+        }
     }
 }

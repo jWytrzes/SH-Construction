@@ -36,7 +36,7 @@ img {
   width: 100%;
   top: 50px;
   left: 0;
-  height: calc(100vh - 50px);
+  height: calc(100% - 50px);
 }
 
 .desktop {
@@ -213,7 +213,7 @@ header .center {
   z-index: 9;
   position: relative;
   width: 100%;
-  padding: 30px 30px 15px;
+  padding: 30px 25px 15px;
   text-align: center;
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -245,16 +245,6 @@ header .center {
           animation: arrowBump .55s ease-in-out infinite alternate both;
 }
 
-section .wrapper {
-  padding: 20px;
-}
-
-section .wrapper img {
-  height: 100%;
-  margin-top: 20px;
-  width: 100%;
-}
-
 section h2 {
   width: 100%;
 }
@@ -268,6 +258,16 @@ section .icon i {
   color: #896D61;
 }
 
+.wrapper {
+  padding: 20px;
+}
+
+.wrapper img {
+  height: 100%;
+  margin-top: 20px;
+  width: 100%;
+}
+
 .columns {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -278,6 +278,10 @@ section .icon i {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.column-2 {
+  margin: 20px 0;
 }
 
 #contact {
@@ -303,6 +307,10 @@ section .icon i {
   top: 0;
   background: #896D61;
   opacity: 0.8;
+}
+
+#steps .wrapper img {
+  margin-top: 0;
 }
 
 @-webkit-keyframes arrowBump {
@@ -373,6 +381,13 @@ section .icon i {
   .column-3 {
     width: 33.33%;
     padding: 40px;
+  }
+  .column-2 {
+    width: 50%;
+    padding: 40px;
+  }
+  .subpage header {
+    height: 70vh;
   }
 }
 /*# sourceMappingURL=style.css.map */
