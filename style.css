@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,500,900&subset=latin-ext");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,900&subset=latin-ext");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -64,7 +64,6 @@ img {
   height: 50px;
   width: 50px;
   background: #896D61;
-  display: inline-block;
   float: right;
   padding: 10px;
   position: relative;
@@ -121,7 +120,7 @@ img {
   height: calc(100vh - 50px);
   -webkit-box-shadow: inset 0 0 10px #DDD;
           box-shadow: inset 0 0 10px #DDD;
-  background: #fff;
+  background: #ffffff;
   z-index: 999;
   padding: 30px 43px;
   text-align: right;
@@ -193,6 +192,10 @@ header {
   padding-top: 50px;
 }
 
+header h1, header h2 {
+  font-weight: 400;
+}
+
 header .logo {
   display: block;
   margin: 0 auto;
@@ -201,12 +204,15 @@ header .logo {
       align-self: flex-end;
   padding: 0 15px;
   z-index: 9;
+  width: 100%;
+  text-align: center;
 }
 
 header .logo img {
   display: block;
   height: auto;
   width: auto;
+  margin: 0 auto;
 }
 
 header .center {
@@ -232,10 +238,12 @@ header .center {
   padding: 12px 15px;
   background: #896D61;
   border-radius: 50px;
-  color: #fff;
+  color: #ffffff;
   font: normal 12px Montserrat, sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
 }
 
 .button i {
@@ -243,6 +251,34 @@ header .center {
   top: 0;
   -webkit-animation: arrowBump .55s ease-in-out infinite alternate both;
           animation: arrowBump .55s ease-in-out infinite alternate both;
+}
+
+.button:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 200%;
+  background: #ffffff;
+  opacity: .1;
+  top: -50%;
+  left: 0;
+  -webkit-transform: skew(20deg) translateX(-101%);
+          transform: skew(20deg) translateX(-101%);
+  z-index: 0;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.button:hover::before {
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+  -webkit-transform: skew(20deg) translateX(500%);
+          transform: skew(20deg) translateX(500%);
 }
 
 section h2 {
@@ -301,7 +337,7 @@ section .icon:hover i {
 
 #contact {
   background: #896D61 url(images/footer.jpg) center/cover no-repeat;
-  color: #fff;
+  color: #ffffff;
   text-align: right;
   position: relative;
   padding-bottom: 30px;
@@ -314,7 +350,7 @@ section .icon:hover i {
 }
 
 #contact a {
-  color: #fff;
+  color: #ffffff;
 }
 
 #contact .layer {
@@ -326,6 +362,77 @@ section .icon:hover i {
 
 #steps .wrapper img {
   margin-top: 0;
+}
+
+.steps-list {
+  margin-top: 40px;
+}
+
+.step {
+  position: relative;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+.step .number {
+  position: absolute;
+  font-size: 80px;
+  font-weight: 900;
+  color: #896D61;
+  opacity: .5;
+  top: 0;
+  line-height: 1;
+  -webkit-transition: -webkit-transform .4s;
+  transition: -webkit-transform .4s;
+  transition: transform .4s;
+  transition: transform .4s, -webkit-transform .4s;
+}
+
+.step h3 {
+  font-size: 25px;
+  font-weight: 400;
+  margin-top: 0px;
+  padding-top: 18px;
+  padding-left: 30px;
+  border-bottom: 1px dashed #896D61;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.step:nth-child(even) .number {
+  right: 0;
+}
+
+.step:nth-child(even) h3 {
+  text-align: right;
+  padding-left: 0;
+  padding-right: 30px;
+  margin: 0 0 0 auto;
+}
+
+.step:nth-child(even):hover .number {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0.3;
+  -webkit-transition: -webkit-transform .4s;
+  transition: -webkit-transform .4s;
+  transition: transform .4s;
+  transition: transform .4s, -webkit-transform .4s;
+}
+
+.step:nth-child(odd):hover .number {
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  opacity: 0.3;
+  -webkit-transition: -webkit-transform .4s;
+  transition: -webkit-transform .4s;
+  transition: transform .4s;
+  transition: transform .4s, -webkit-transform .4s;
+}
+
+.plain-text {
+  margin: 40px 0 60px 0;
 }
 
 @-webkit-keyframes arrowBump {
@@ -407,6 +514,16 @@ section .icon:hover i {
   }
   .subpage header {
     height: 70vh;
+  }
+  .step:nth-child(even):hover .number {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0.6;
+  }
+  .step:nth-child(odd):hover .number {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0.6;
   }
 }
 /*# sourceMappingURL=style.css.map */
