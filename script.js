@@ -44,6 +44,26 @@ document.addEventListener("DOMContentLoaded", () => {
         //okno
     }
 
+    let furnituresBlurSize = () => {
+        [...document.querySelectorAll('.step.furniture')].forEach(el => {
+            let imgs = el.childNodes;
+            for(let i=0; i<imgs.length;i++) {
+                if(imgs[i].className == 'blur') {
+                    console.log(imgs[i].childNodes[1].style);
+                    imgs[i].childNodes[1].style.minWidth =
+                        el.clientWidth + 10 + "px";
+                    imgs[i].childNodes[1].style.minHeight =
+						el.clientHeight + 10 + "px";
+                }
+            }
+        });
+       /* [...document.querySelectorAll(".blur img")].forEach( el => {
+            el
+            el.style
+		});*/
+    }
+    furnituresBlurSize();
+
     document.querySelector('.burger').addEventListener("click", toggleMenu);
     document.querySelector('body').addEventListener("mouseleave", showContactPopup);
 

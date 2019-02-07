@@ -177,6 +177,7 @@ img {
 header {
   height: 100vh;
   background-image: url(images/header3.jpg);
+  background-attachment: fixed;
   background-size: cover;
   background-position: right center;
   position: relative;
@@ -433,6 +434,85 @@ section .icon:hover i {
 
 .plain-text {
   margin: 40px 0 60px 0;
+}
+
+.furniture {
+  margin: 50px auto;
+}
+
+.furniture > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+  margin: 0;
+}
+
+.furniture .content {
+  z-index: 9;
+  position: relative;
+  padding: 30px;
+  width: 40%;
+  text-align: left;
+  color: #ffffff;
+  text-shadow: 0 0 5px #896D61;
+}
+
+.furniture h3 {
+  width: auto;
+  border-bottom: none;
+  padding: 0;
+  margin-top: auto;
+  padding: 1px;
+}
+
+.furniture .blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.furniture .blur img {
+  margin: 0;
+  opacity: 1;
+  filter: blur(2px);
+  -webkit-filter: blur(5px);
+  top: -5px;
+  left: -5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+}
+
+.furniture:nth-child(even) .content {
+  margin: 0 0 0 auto;
+  text-align: right;
+}
+
+.furniture:nth-child(even) .content h3 {
+  text-align: right;
+  padding: 0;
+}
+
+.furniture:nth-child(even) .blur {
+  right: 0;
+  left: auto;
+}
+
+.furniture:nth-child(even) .blur img {
+  right: -5px;
+  left: auto;
+}
+
+.furniture:nth-of-type(1) {
+  overflow: hidden;
 }
 
 @-webkit-keyframes arrowBump {
