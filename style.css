@@ -356,6 +356,9 @@ section .icon:hover i {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .column-2 {
@@ -363,7 +366,8 @@ section .icon:hover i {
 }
 
 .square {
-  width: 33%;
+  width: 100%;
+  max-width: 400px;
   height: auto;
   overflow: hidden;
 }
@@ -644,6 +648,9 @@ section .icon:hover i {
   .column-2 {
     width: 50%;
     padding: 40px;
+  }
+  .square {
+    width: 33%;
   }
   .subpage header {
     height: 70vh;

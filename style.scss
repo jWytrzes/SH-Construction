@@ -332,6 +332,7 @@ section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .column-2 {
@@ -339,7 +340,8 @@ section {
 }
 
 .square {
-    width: 33%;
+    width: 100%;
+    max-width: 400px;
     height: auto;
     overflow: hidden;
 
@@ -618,6 +620,10 @@ section {
     .column-2 {
         width: 50%;
         padding: 40px;
+    }
+
+    .square {
+        width: 33%;
     }
 
     //podstrona
