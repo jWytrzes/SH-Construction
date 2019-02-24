@@ -15,7 +15,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> SH Construction | Krok po kroku </title>
+    <title> SH Construction | Elektryka i PV </title>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
         crossorigin="anonymous">
@@ -23,7 +23,7 @@
     <script src="../script.js"></script>
 </head>
 
-<body>
+<body class='subpage'>
     <div id="loader">
         <div class="block">
         </div>
@@ -32,7 +32,6 @@
             <div></div>
         </div>
     </div>
-    
     <!-- Load Facebook SDK for JavaScript -->
     <div id="fb-root"></div>
     <script>
@@ -51,18 +50,20 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-    
+
     <!-- Your customer chat code -->
-    <div class="fb-customerchat" attribution=setup_tool page_id="435326250332762" theme_color="#896D61" logged_in_greeting="Dzień dobry! W czym możemy Ci pomóc?"
-        logged_out_greeting="Dzień dobry! W czym możemy Ci pomóc?">
+    <div class="fb-customerchat" attribution=setup_tool page_id="435326250332762" theme_color="#896D61"
+        logged_in_greeting="Dzień dobry! W czym możemy Ci pomóc?" logged_out_greeting="Dzień dobry! W czym możemy Ci pomóc?">
     </div>
 
     <header>
         <div class="menu">
             <ul class="social-media">
-                <li> <a href="https://www.facebook.com/SHConstructionpl/" target="_blank"> <i class="fab fa-facebook-f"></i> </a>
+                <li> <a href="https://www.facebook.com/SHConstructionpl/" target="_blank"> <i class="fab fa-facebook-f"></i>
+                    </a>
                 </li>
-                <li> <a href="https://www.instagram.com/shconstructionpl/" target="_blank"> <i class="fab fa-instagram"></i> </a>
+                <li> <a href="https://www.instagram.com/shconstructionpl/" target="_blank"> <i class="fab fa-instagram"></i>
+                    </a>
                 </li>
             </ul>
             <div class="burger">
@@ -73,27 +74,55 @@
             <div class="menu-lists">
                 <ul>
                     <li> <a href="../index.html"> Strona główna </a> </li>
-                    <li class=""> <a href="index.html"> Krok po kroku </a> </li>
+                    <li> <a href="../steps"> Krok po kroku </a> </li>
                     <li class="contact"> <a href="#contact"> Kontakt </a> </li>
                 </ul>
                 <ul>
-                    <li> <a href="../furniture/"> Meble na wymiar </a> </li>
+                    <li> <a href="../furniture/index.html"> Meble na wymiar </a> </li>
                     <li> <a href="../sawmill/index.html"> Tartak </a> </li>
-                    <li> <a href="../electricity/index.html"> Elektryka i PV </a> </li>
+                    <li class="active main"> <a href="./index.html"> Elektryka i PV </a> </li>
                 </ul>
             </div>
         </div>
         <div class="logo">
-            <h1> Strona w budowie </h1>
+            <h1> Elektryka i PV </h1>
         </div>
 
         <div class="center">
-            <h2> Przejdź do strony głównej: </h2>
-            <a href="index.html" class="button"> Strona główna </a>
+            <a href="#electricity" class="button"> Dowiedz się więcej <i class="fas fa-chevron-down"></i> </a>
         </div>
 
         <div class="layer"></div>
     </header>
+
+    <section id="electricity">
+        <div class="wrapper">
+            <p>
+                Wykonujemy kompleksowe remonty całych budynków począwszy od wykonania przyłącza kończąc na montażu żyrandola i
+                wkręceniu żarówek. Montujemy również instalacje fotowoltaiczne. Zespół naszych ludzi zadba by odpowiednia ilość paneli
+                została precyzyjnie zamontowana i doskonale funkcjonowała przez długie lata.
+            </p>
+            <p>
+                Potrzebujesz naszego elektryka? Skontaktuj się z nami
+            </p>
+            <p>
+                Dzięki temu, że nasi pracownicy rozmieszczeni są w całym województwie dojazd do klienta jest szybki, a usunięcie
+                ewentualnej usterki o wiele się skraca.
+            </p>
+
+            <h2> Mapa elektryków </h2>
+            <img src="./images/map.png" alt="mapa elektryków">
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="wrapper">
+            <h2> Skontaktuj się z nami</h2>
+            <div> <a href="tel:+48796479764"> +48 796 479 764 </a> <i class="fas fa-phone"></i> </div>
+            <div> <a href="mailto:franczak3@gmail.com"> franczak3@gmail.com </a> <i class="fas fa-at"></i> </div>
+        </div>
+        <div class="layer"></div>
+    </footer>
 </body>
 
 </html>

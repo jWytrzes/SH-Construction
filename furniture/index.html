@@ -24,8 +24,47 @@
 </head>
 
 <body class='subpage'>
+    <div id="loader">
+        <div class="block">
+        </div>
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v3.2'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/pl_PL/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="435326250332762" theme_color="#896D61" logged_in_greeting="Dzień dobry! W czym możemy Ci pomóc?"
+        logged_out_greeting="Dzień dobry! W czym możemy Ci pomóc?">
+    </div>
+
     <header>
         <div class="menu">
+            <ul class="social-media">
+                <li> <a href="https://www.facebook.com/SHConstructionpl/" target="_blank"> <i class="fab fa-facebook-f"></i> </a>
+                </li>
+                <li> <a href="https://www.instagram.com/shconstructionpl/" target="_blank"> <i class="fab fa-instagram"></i> </a>
+                </li>
+            </ul>
             <div class="burger">
                 <div class="line"></div>
                 <div class="line"></div>
@@ -39,8 +78,8 @@
                 </ul>
                 <ul>
                     <li class="active main"> <a href="index.html"> Meble na wymiar </a> </li>
-                    <li> <a href="../inprogress.html"> Tartak </a> </li>
-                    <li> <a href="../inprogress.html"> Elektryka i PV </a> </li>
+                    <li> <a href="../sawmill/index.html"> Tartak </a> </li>
+                    <li> <a href="../electricity/index.html"> Elektryka i PV </a> </li>
                 </ul>
             </div>
         </div>
@@ -131,8 +170,8 @@
     <footer id="contact">
         <div class="wrapper">
             <h2> Skontaktuj się z nami</h2>
-            <div> <a href="tel:+123456789"> 123 456 789 </a> <i class="fas fa-phone"></i> </div>
-            <div> <a href="mailto:email@email.com"> email@email.com </a> <i class="fas fa-at"></i> </div>
+            <div> <a href="tel:+48796479764"> +48 796 479 764 </a> <i class="fas fa-phone"></i> </div>
+            <div> <a href="mailto:franczak3@gmail.com"> franczak3@gmail.com </a> <i class="fas fa-at"></i> </div>
         </div>
         <div class="layer"></div>
     </footer>

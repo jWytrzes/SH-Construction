@@ -56,6 +56,31 @@ img {
     margin-right: 0;
 }
 
+.social-media {
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: fit-content;
+    padding-left: 5px;
+    top: 2px;
+
+    li {
+        display: inline-block;
+
+        a {
+            display: block;
+            padding: 10px;
+        }
+    }
+
+    i {
+        color: $main-color;
+
+    }
+}
+
 //header
 .menu {
     height: $bar-height;
@@ -313,6 +338,18 @@ section {
     margin: 20px 0;
 }
 
+.square {
+    width: 33%;
+    height: auto;
+    overflow: hidden;
+
+    img {
+        display: block;
+        margin: 0;
+        object-fit: cover;
+    }
+}
+
 #contact {
     background: $main-color url(images/footer.jpg) center/cover no-repeat;
     color: $white;
@@ -504,7 +541,6 @@ section {
     }
 }
 
-
 @keyframes arrowBump {
     0% {
         transform: translateY(-3px);
@@ -533,11 +569,12 @@ section {
         .menu-lists {
             box-shadow: none;
             transform: none;
-            width: 100%;
+            width: fit-content;
             top: 0;
             background: transparent;
             padding: 0;
             height: $bar-height;
+            display: inline-block;
 
             ul {
                 padding: 0;
@@ -616,4 +653,81 @@ section {
             width: 40%;
         }
     }
+
+    #sawmill, #electricity {
+        .wrapper {
+            padding: 50px 100px 100px;
+        }
+
+        .columns {
+            margin-top: 50px;
+        }
+    }
+
+    #renovations {
+        .columns {
+            margin: 50px 0;
+        }
+    }
+}
+
+//loader
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $white;
+    z-index: 99999999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    .block {
+        width: 100%;
+        text-align: center;
+        background: url(./images/logo.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 60px;
+        background-position: center;
+        align-self: flex-end;
+    }
+}
+
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  align-self: flex-start;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid $main-color;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1.5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 28px;
+    left: 28px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: -1px;
+    left: -1px;
+    width: 58px;
+    height: 58px;
+    opacity: 0;
+  }
 }

@@ -64,6 +64,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     furnituresBlurSize();
 
+    let squareBox = () => {
+        let squares = document.querySelectorAll('.columns .square');
+
+        for(let box of squares) {
+            box.style.height = box.clientWidth + 'px';
+        }
+    } 
+    squareBox();
+
     document.querySelector('.burger').addEventListener("click", toggleMenu);
     document.querySelector('body').addEventListener("mouseleave", showContactPopup);
 
@@ -75,3 +84,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", menuActiveChange);
 	
 });
+
+window.addEventListener('load', () => {
+    window.scrollTo(0, 0);
+    document.querySelector('#loader').style.display = 'none';
+})
