@@ -395,6 +395,8 @@ section .icon:hover i {
 
 #contact a {
   color: #ffffff;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
 #contact .layer {
